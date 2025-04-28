@@ -117,18 +117,24 @@ header nav a {
 
 .about-section {
   padding: 80px 0;
+  margin-bottom: -180px;
 }
 
 .about-content {
-  display: flex;
-  align-items: center;
-  gap: 50px;
-  flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-gap: 70px;
+    grid-template-areas:
+    "about-img about-details"
+    "about-img about-info"
+    "about-img social-links"
+    "about-img about-buttons";
 }
 
 .about-image img {
   max-width: 100%;
   border-radius: 10px;
+  grid-area: about-img;
 }
 
 .about-details {
@@ -152,6 +158,7 @@ header nav a {
 .about-details p {
   margin-bottom: 20px;
   color: #555;
+  grid-area: about-details;
 }
 
 .about-info {
@@ -163,6 +170,7 @@ header nav a {
 
 .about-info strong {
   font-weight: 600;
+  grid-area: about-info;
 }
 
 .social-links a {
@@ -170,6 +178,7 @@ header nav a {
   font-size: 20px;
   margin-right: 15px;
   transition: 0.3s;
+  grid-area: social-links;
 }
 
 .social-links a:hover {
@@ -178,6 +187,7 @@ header nav a {
 
 .about-buttons {
   margin-top: 20px;
+  grid-area: about-buttons;
 }
 
 .about-buttons .btn {
@@ -198,7 +208,6 @@ header nav a {
   background: #10b981;
   color: #fff;
 }
-
 
 /* Section Styles */
 .section { 
@@ -221,10 +230,91 @@ header nav a {
     max-width: 800px; 
     margin: 0 auto; 
 }
+.container3{
+    display: flex;
+}
+.webdev, .appdev, .photography{
+    background-color: white;
+    margin: 60px;
+    padding: 20px;
+}
+.webdev, .appdev{
+    margin-right: -40px;
+}
+.service{
+    text-align: center;
+}
+.service, a{
+    color: rgb(15, 131, 83);
+}
+.webdev > i, .appdev > i, .photography > i{
+    color: rgb(15, 131, 83);
+    font-size: 30px;
+}
+.achieve > h1{
+    text-align: center;
+    margin-top: 150px;
+}
+.container4{
+    display: grid;
+    grid-template-columns: 1fr, 2fr;
+    grid-gap: 100px;
+    grid-template-areas: 
+    "skillsimg header"
+    "skillsimg skills";
+    margin-top: 100px;
+}
+.skillsimg{
+    grid-area: skillsimg;
+    max-width: 100%;
+    border-radius: 10px;
+}
+.skillsme{
+    grid-area: skills;
+    margin-top: -350px;
+}
+.header{
+    grid-area: header;
+}
+.imgskill{
+    width: 400px;
+    height: auto;
+}
+.ui{
+    background-color: rgb(238, 237, 237);
+    width: 500px;
+}
+.ui-join{
+    border: 2px solid rgb(15, 131, 83);
+    width: 350px;
+}
+.ideas{
+    background-color: rgb(238, 237, 237);
+    width: 500px;
+}
+.ideas-join{
+    border: 2px solid rgb(15, 131, 83);
+    width: 450px;
+}
+.responsive{
+    background-color: rgb(238, 237, 237);
+    width: 500px;
+}
+.responsive-join{
+    border: 2px solid rgb(15, 131, 83);
+    width: 400px;
+}
+.design{
+    background-color: rgb(238, 237, 237);
+    width: 500px;
+}
+.design-join{
+    border: 2px solid rgb(15, 131, 83);
+    width: 300px;
+}
 
 /* Grid Layouts */
-.services, 
-.skills, 
+
 .counters, 
 .work-gallery { 
     display: grid; 
